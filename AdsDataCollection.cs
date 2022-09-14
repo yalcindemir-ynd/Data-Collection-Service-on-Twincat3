@@ -22,8 +22,11 @@ namespace DataCollectionService
         private readonly AmsNetId AmsNetID;
         private readonly AdsClient PlcAdsClient = new();
 
-        public AdsDataCollection(IConfiguration configuration)
+        private readonly ILogger<AdsWorker> _logger;
+        public AdsDataCollection(ILogger<AdsWorker> logger, IConfiguration configuration)
         {
+            _logger = logger;
+
             var netID = configuration.GetValue<string>("AmsNetId",AmsNetId.Local.ToString());
 
             AmsNetID = new(string.IsNullOrEmpty(netID) ?AmsNetId.Local.ToString(): netID);
@@ -35,6 +38,8 @@ namespace DataCollectionService
 
         }
         #endregion
+
+        
 
         public async Task Ads(CancellationToken stoppingToken)
         {
@@ -195,7 +200,7 @@ namespace DataCollectionService
             }
             catch (Exception ex)
             {
-                _= "Connection Error: " + ex.Message;
+                _logger.LogInformation("Connection Error: {}", ex.Message);
             }
 
             return state;
@@ -210,7 +215,7 @@ namespace DataCollectionService
             }
             catch (Exception ex)
             {
-                _ = ex.Message;
+                _logger.LogInformation("Disconnection Error: {}", ex.Message);
             }
             
         }
@@ -229,14 +234,5 @@ namespace DataCollectionService
             }
         }
         #endregion
-
-        public void Dispose()
-        {
-            SessionDisconnect();
-            Session.Dispose();
-
-            PlcAdsClient.Disconnect();
-            PlcAdsClient.Dispose();
-        }
     }
 }

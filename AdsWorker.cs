@@ -14,7 +14,7 @@ namespace DataCollectionService
         public AdsWorker(ILogger<AdsWorker> logger, IConfiguration configuration)
         {
             _logger = logger;
-            AdsCollector = new(configuration);
+            AdsCollector = new(logger,configuration);
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -37,13 +37,6 @@ namespace DataCollectionService
 
                 await Task.Delay(1000, stoppingToken);
             }
-        }
-
-        public override void Dispose()
-        {
-            AdsCollector.Dispose();
-            base.Dispose();
-            GC.SuppressFinalize(this);
         }
     }
 }

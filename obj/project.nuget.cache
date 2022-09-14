@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U5kmOGqf5c8vgFCzldH6XthaE4ovXcnvBAuGjXupzGo7Ogs04P9X4QnOqKcWai4tcC4nd2hC2GXcMoGHJ9ngCw==",
+  "dgSpecHash": "h5WUiQebQuwk8dkX/F7RYMG/gdAx8vLhPUzghuYEfN5+nblnhMw+GPbP1JLCLXprhqyij7WjXpwdLALVaIx4oQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\yalcind\\Desktop\\AdsCollectionService\\DataCollectionService.csproj",
+  "projectFilePath": "C:\\Users\\yalcind\\Desktop\\AdsCollectionService\\Data-Collection-Service-on-Twincat3\\DataCollectionService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\yalcind\\.nuget\\packages\\beckhoff.twincat.ads\\6.0.190\\beckhoff.twincat.ads.6.0.190.nupkg.sha512",
     "C:\\Users\\yalcind\\.nuget\\packages\\beckhoff.twincat.ads.abstractions\\6.0.190\\beckhoff.twincat.ads.abstractions.6.0.190.nupkg.sha512",

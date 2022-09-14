@@ -1897,11 +1897,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yalcind\\Desktop\\AdsCollectionService\\DataCollectionService.csproj",
+      "projectUniqueName": "C:\\Users\\yalcind\\Desktop\\AdsCollectionService\\Data-Collection-Service-on-Twincat3\\DataCollectionService.csproj",
       "projectName": "DataCollectionService",
-      "projectPath": "C:\\Users\\yalcind\\Desktop\\AdsCollectionService\\DataCollectionService.csproj",
+      "projectPath": "C:\\Users\\yalcind\\Desktop\\AdsCollectionService\\Data-Collection-Service-on-Twincat3\\DataCollectionService.csproj",
       "packagesPath": "C:\\Users\\yalcind\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yalcind\\Desktop\\AdsCollectionService\\obj\\",
+      "outputPath": "C:\\Users\\yalcind\\Desktop\\AdsCollectionService\\Data-Collection-Service-on-Twincat3\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
