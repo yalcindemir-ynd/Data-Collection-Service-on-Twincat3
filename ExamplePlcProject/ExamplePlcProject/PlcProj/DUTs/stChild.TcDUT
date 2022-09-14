@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <DUT Name="stChild" Id="{63499eb6-de7c-4952-9a91-ef2b2ab468b6}">
+    <Declaration><![CDATA[TYPE stChild :
+	STRUCT
+		fVar1 : LREAL;
+		fVar2 : REAL;
+		nVar3 : WORD;
+	END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

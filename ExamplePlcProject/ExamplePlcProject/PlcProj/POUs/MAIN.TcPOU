@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.11">
+  <POU Name="MAIN" Id="{574a21a8-f75d-4cb6-87ef-b6c5011a7bc1}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	randomValue : LREAL;
+	Rand: DRAND;
+END_VAR]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[Rand(Seed:=0,Num=>randomValue);
+
+GVL.ST_Dat1.bVar1:=INT_TO_BOOL(LREAL_TO_INT(randomValue));
+GVL.ST_Dat1.bVar2:=NOT INT_TO_BOOL(LREAL_TO_INT(randomValue));
+GVL.ST_Dat1.fVar3:=randomValue*1;
+GVL.ST_Dat1.fVar4:=LREAL_TO_REAL(randomValue*2);
+GVL.ST_Dat1.nVar5:=LREAL_TO_INT(randomValue*3);
+GVL.ST_Dat1.nVar6:=LREAL_TO_INT(randomValue*4);
+GVL.ST_Dat1.nVar7.fVar1:=randomValue*5;
+GVL.ST_Dat1.nVar7.fVar2:=LREAL_TO_REAL(randomValue*6);
+GVL.ST_Dat1.nVar7.nVar3:=LREAL_TO_WORD(randomValue*100);
+
+GVL.ST_Dat2.bVar1:=INT_TO_BOOL(LREAL_TO_INT(randomValue));
+GVL.ST_Dat2.bVar2:=NOT INT_TO_BOOL(LREAL_TO_INT(randomValue));
+GVL.ST_Dat2.fVar3:=randomValue*1;;
+GVL.ST_Dat2.fVar4:=LREAL_TO_REAL(randomValue*2);
+GVL.ST_Dat2.nVar5:=LREAL_TO_INT(randomValue*3);
+GVL.ST_Dat2.nVar6:=LREAL_TO_INT(randomValue*4);
+GVL.ST_Dat2.nVar7.fVar1:=randomValue*5;
+GVL.ST_Dat2.nVar7.fVar2:=LREAL_TO_REAL(randomValue*6);
+GVL.ST_Dat2.nVar7.nVar3:=LREAL_TO_WORD(randomValue*100);]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="33" Count="0" />
+      <LineId Id="29" Count="0" />
+      <LineId Id="2" Count="0" />
+      <LineId Id="7" Count="0" />
+      <LineId Id="41" Count="5" />
+      <LineId Id="36" Count="0" />
+      <LineId Id="17" Count="8" />
+      <LineId Id="16" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
